@@ -23,6 +23,7 @@ MODULE utilidades
   IMPLICIT NONE
   EXTERNAL dgesv
   EXTERNAL dsyev
+  PUBLIC
 
   INTERFACE energia_cinetica
     MODULE PROCEDURE energia_cinetica_vec

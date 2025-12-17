@@ -5,14 +5,13 @@ project(utilidades LANGUAGES Fortran)
 # --------------------------------------------------
 # Biblioteca
 # --------------------------------------------------
-add_library(utilidades STATIC)
+add_library(utilidades SHARED)
 
 # --------------------------------------------------
 # Onde os .mod vão ser gerados
 # --------------------------------------------------
 set_target_properties(utilidades PROPERTIES
-  Fortran_MODULE_DIRECTORY
-    ${CMAKE_CURRENT_BINARY_DIR}/mod
+  Fortran_MODULE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/mod
 )
 
 # --------------------------------------------------
@@ -41,7 +40,7 @@ IF (NOT OpenBLAS_LIB)
   message(FATAL_ERROR "OpenBLAS nao encontrado!!!")
 ENDIF()
 
-target_link_libraries(utilidades PRIVATE ${OpenBLAS_LIB})
+target_link_libraries(utilidades PUBLIC ${OpenBLAS_LIB})
 # ============================================================================
 
 # --------------------------------------------------
@@ -52,28 +51,3 @@ target_include_directories(utilidades
     ${CMAKE_CURRENT_BINARY_DIR}/mod
     ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
-
-
-
-
-
-
-# --------------------------------------------------
-# Instalação (opcional, mas já preparado)
-# --------------------------------------------------
-# install(TARGETS utilidades
-#   EXPORT utilidadesTargets
-#   ARCHIVE DESTINATION lib
-#   LIBRARY DESTINATION lib
-# )
-
-# install(DIRECTORY
-#   ${CMAKE_CURRENT_BINARY_DIR}/mod/
-#   DESTINATION include/utilidades
-# )
-
-# install(EXPORT utilidadesTargets
-#   FILE utilidadesTargets.cmake
-#   NAMESPACE utilidades::
-#   DESTINATION lib/cmake/utilidades
-# )
