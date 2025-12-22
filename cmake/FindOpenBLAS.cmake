@@ -13,8 +13,8 @@ SET(Open_BLAS_INCLUDE_SEARCH_PATHS
     C:/msys64/usr/include
     C:/msys64/usr/include/openblas
     # MSYS2 + MINGW64 (padrao)
-    C:/msys64/mingw64/usr/include
-    C:/msys64/mingw64/usr/include/openblas
+    C:/msys64/mingw64/include
+    C:/msys64/mingw64/include/openblas
 
     D:/programas/msys64/mingw64/include/openblas
     
@@ -41,8 +41,8 @@ SET(Open_BLAS_LIB_SEARCH_PATHS
     C:/msys64/usr/lib
     C:/msys64/usr/lib/openblas
     # MSYS2 + MINGW64 (padrao)
-    C:/msys64/mingw64/usr/lib
-    C:/msys64/mingw64/usr/lib/openblas
+    C:/msys64/mingw64/lib
+    C:/msys64/mingw64/lib/openblas
 
     D:/programas/msys64/mingw64/lib
 
