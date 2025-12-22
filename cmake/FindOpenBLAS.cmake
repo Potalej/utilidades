@@ -51,7 +51,7 @@ SET(Open_BLAS_LIB_SEARCH_PATHS
     D:/programas/msys64/mingw64/lib
 
     # Ambiente (PATH)
-    $ENV{OpenBLAS}cd
+    $ENV{OpenBLAS}
     $ENV{OpenBLAS}/lib
     $ENV{OpenBLAS_HOME}
     $ENV{OpenBLAS_HOME}/lib
