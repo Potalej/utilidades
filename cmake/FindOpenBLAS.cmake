@@ -9,6 +9,8 @@ SET(Open_BLAS_INCLUDE_SEARCH_PATHS
     # MinGW (padrao)
     C:/MinGW/include
     C:/MinGW/include/openblas
+    C:/mingw64/include
+    C:/mingw64/include/openblas
     # MSYS2 (padrao)
     C:/msys64/usr/include
     C:/msys64/usr/include/openblas
@@ -37,6 +39,8 @@ SET(Open_BLAS_LIB_SEARCH_PATHS
     # MinGW (padrao)
     C:/MinGW/lib
     C:/MinGW/lib/openblas
+    C:/mingw64/lib
+    C:/mingw64/lib/openblas
     # MSYS2 (padrao)
     C:/msys64/usr/lib
     C:/msys64/usr/lib/openblas
