@@ -794,4 +794,30 @@ FUNCTION anisotropia_velocidades (m, R, P)
 
 END FUNCTION anisotropia_velocidades
 
+! ************************************************************
+!! Crossing time
+!
+! Objetivos:
+!  Crossing time
+!
+! Modificado:
+!   26 de marco de 2026
+!
+! Autoria:
+!   oap
+! 
+FUNCTION crossing_time (m, R, P, G, eps)
+  
+  IMPLICIT NONE
+  REAL(pf) :: crossing_time
+  REAL(pf), INTENT(IN) :: m(:), R(:,:), P(:,:), G, eps
+  REAL(pf) :: vrms, rg
+
+  vrms = SQRT(2 * energia_cinetica(m, P) / SUM(m))
+  rg = G * SUM(m)**2
+  rg = rg / ABS(energia_potencial_vec(G, m, R, eps))
+  crossing_time = rg / vrms
+
+END FUNCTION
+
 END MODULE utilidades
